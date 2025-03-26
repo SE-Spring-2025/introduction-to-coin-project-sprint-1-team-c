@@ -1,4 +1,4 @@
-public class Coin {
+public abstract class Coin {
     private String familiarName;
     private double value;
     private String frontMotto;
