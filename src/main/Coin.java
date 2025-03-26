@@ -1,27 +1,27 @@
 public abstract class Coin {
-    private String familiarName;
-    private double value;
-    private String frontMotto;
-    private String backMotto;
-    private String frontLabel;
-    private String backLabel;
-    private String frontImage;
-    private String backImage;
-    private String valueDescription;
-    private boolean ridgedEdge;
-    private String metallurgy;
-    private int manufactureYear;
+    protected String familiarName;
+    protected double value;
+    protected String frontMotto;
+    protected String backMotto;
+    protected String frontLabel;
+    protected String backLabel;
+    protected String frontImage;
+    protected String backImage;
+    protected String valueDescription;
+    protected boolean ridgedEdge;
+    protected String metallurgy;
+    protected int manufactureYear;
     
     public Coin() {
 
-	}
+    }
     public Coin(double value) {
 
-	}
+    }
     public Coin(double value, int year) {
 
     }
     public String toString() {
-		return "";
+        return "";
     }
 }
