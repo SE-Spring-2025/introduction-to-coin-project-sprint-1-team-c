@@ -7,4 +7,4 @@
 * Adam - Collaborated with Ayden to write Coin.java.
 * Ayden - 
 * Haben - 
-* Carson -  
+* Carson -  Collaborated with Haben to write half of Coin.java skeleton code.
