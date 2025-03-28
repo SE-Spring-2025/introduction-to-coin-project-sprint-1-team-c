@@ -25,4 +25,5 @@ public class Dollar extends Coin {
         manufactureYear = year;
     }
     
+    
 }
