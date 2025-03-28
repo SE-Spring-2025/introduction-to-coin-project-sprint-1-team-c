@@ -11,8 +11,8 @@ public abstract class Coin {
     protected String backImage;
     protected String valueDescription;
     protected boolean ridgedEdge;
-    protected String metallurgy;
     protected int manufactureYear;
+    protected String metallurgy;
     
     public Coin() {
 
