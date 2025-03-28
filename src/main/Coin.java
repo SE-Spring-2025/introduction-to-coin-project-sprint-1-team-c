@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public abstract class Coin {
     protected String familiarName;
     protected double value;
@@ -22,6 +24,21 @@ public abstract class Coin {
 
     }
     public String toString() {
-        return "";
+        DecimalFormat df = new DecimalFormat("0.00");
+        String formattedValue = df.format(value);
+	
+	    return "[" + familiarName
+	        + "," + formattedValue
+	        + "," + manufactureYear
+	        + ",'" + frontMotto
+	        + "','" + backMotto
+	        + "','" + frontImage
+	        + "','" + backImage
+	        + "','" + frontLabel
+	        + "','" + backLabel
+	        + "','" + valueDescription
+	        + "'," + (ridgedEdge ? "ridges" : "smooth")
+	        + ",'" + metallurgy
+	        + "']";
     }
 }
