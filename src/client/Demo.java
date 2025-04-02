@@ -22,6 +22,11 @@ public class Demo {
 	Dollar dollarCoin = new Dollar();
 	System.out.println("Here is a dollar: " + dollarCoin.toString());
 
-	System.out.println(pennyCoin.getMetallurgy());
-	}
+	System.out.println("A penny is made of " + pennyCoin.getMetallurgy());
+	System.out.println("A nickle is made of " + nickelCoin.getMetallurgy());
+	System.out.println("A dime is made of " + dimeCoin.getMetallurgy());
+	System.out.println("A quarter is made of " + quarterCoin.getMetallurgy());
+	System.out.println("A halfDollar is made of " + halfDollarCoin.getMetallurgy());
+	System.out.println("A dollar is made of " + dollarCoin.getMetallurgy());
+ }
 }
