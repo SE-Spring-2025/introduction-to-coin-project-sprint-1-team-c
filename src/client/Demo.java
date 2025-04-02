@@ -21,8 +21,7 @@ public class Demo {
 
 	Dollar dollarCoin = new Dollar();
 	System.out.println("Here is a dollar: " + dollarCoin.toString());
-	
-	Metallurgy objMeta = new Metallurgy();
-	System.out.println("Here is the metallurgy object: " + objMeta.toString());
-    }
+
+	System.out.println(pennyCoin.getMetallurgy());
+	}
 }
