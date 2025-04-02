@@ -1,4 +1,5 @@
 public class Quarter extends Coin {
+    public final double quarterValue = .25;
     public Quarter() {
         familiarName = "Quarter";
         frontImage = "G_Washington";
@@ -10,6 +11,7 @@ public class Quarter extends Coin {
         backMotto = "E PLURIBUS UNUM";
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
+        value = quarterValue;
     }
     public Quarter(int year) {
         familiarName = "Quarter";
@@ -23,5 +25,6 @@ public class Quarter extends Coin {
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
         manufactureYear = year;
+        value = quarterValue;
     }
 }

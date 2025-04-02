@@ -1,4 +1,5 @@
 public class Penny extends Coin {
+    public final double pennyValue = .01;
     public Penny() {
 	familiarName = "Penny";
 	frontImage = "A_Lincoln";
@@ -10,6 +11,7 @@ public class Penny extends Coin {
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
 	backLabel = "UNITED STATES OF AMERICA";
+	value = pennyValue;
     }
 
     public Penny(int year) {
@@ -24,5 +26,6 @@ public class Penny extends Coin {
 	frontLabel = "LIBERTY";
 	backLabel = "UNITED STATES OF AMERICA";
 	manufactureYear = year;
+	value = pennyValue;
     }
 }

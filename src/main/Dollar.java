@@ -1,4 +1,5 @@
 public class Dollar extends Coin { 
+    public final double dollarValue = 1;
     public Dollar() {
         familiarName = "Dollar";
         frontImage = "S_Anthony";
@@ -10,6 +11,7 @@ public class Dollar extends Coin {
         backMotto = "E PLURIBUS UNUM";
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
+        value = dollarValue;
     }
     public Dollar(int year) {
         familiarName = "Dollar";
@@ -23,6 +25,7 @@ public class Dollar extends Coin {
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
         manufactureYear = year;
+        value = dollarValue;
     }
     
     

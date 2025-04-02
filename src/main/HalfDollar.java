@@ -1,4 +1,5 @@
 public class HalfDollar extends Coin {
+    public final double halfDollarValue = .5;
     public HalfDollar() {
         familiarName = "HalfDollar";
         frontImage = "J_Kennedy";
@@ -9,7 +10,8 @@ public class HalfDollar extends Coin {
         frontMotto = "IN GOD WE TRUST";
         backMotto = "E PLURIBUS UNUM";
         frontLabel = "LIBERTY";
-        backLabel = "UNITED STATES OF AMERICA";    
+        backLabel = "UNITED STATES OF AMERICA"; 
+        value = halfDollarValue;   
     }
     public HalfDollar(int year) {
         familiarName = "HalfDollar";
@@ -23,6 +25,7 @@ public class HalfDollar extends Coin {
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
         manufactureYear = year;
+        value = halfDollarValue;   
     }
     
 }

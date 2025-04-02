@@ -1,4 +1,6 @@
 public class Nickel extends Coin {
+    public final double nickelValue = .05;
+
     public Nickel() {
 	familiarName = "Nickel";
 	frontImage = "T_Jefferson";
@@ -10,6 +12,7 @@ public class Nickel extends Coin {
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
 	backLabel = "UNITED STATES OF AMERICA";
+	value = nickelValue;
     }
 
     public Nickel(int year) {
@@ -24,5 +27,6 @@ public class Nickel extends Coin {
 	frontLabel = "LIBERTY";
 	backLabel = "UNITED STATES OF AMERICA";
 	manufactureYear = year;
+	value = nickelValue;
     }
 }
