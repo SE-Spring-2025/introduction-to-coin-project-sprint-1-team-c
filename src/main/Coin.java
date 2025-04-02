@@ -53,8 +53,8 @@ public abstract class Coin {
     public boolean getRidgedEdge() {
 	return ridgedEdge;
     }
-    public Metallurgy getMetallurgy() {
-	return metallurgy;
+    public String getMetallurgy() {
+	return metallurgy.smelt();
     }
     public int getYear() {
 	return manufactureYear;
