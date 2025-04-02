@@ -7,7 +7,7 @@ public class Nickel extends Coin {
 	backImage = "Jefferson_Memorial";
 	valueDescription = "FIVE CENTS";
 	ridgedEdge = false;
-	metallurgy = "Cupro-Nickel";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
@@ -21,7 +21,7 @@ public class Nickel extends Coin {
 	backImage = "Jefferson_Memorial";
 	valueDescription = "FIVE CENTS";
 	ridgedEdge = false;
-	metallurgy = "Cupro-Nickel";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";

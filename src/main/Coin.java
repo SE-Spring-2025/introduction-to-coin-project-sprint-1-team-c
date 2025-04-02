@@ -12,7 +12,7 @@ public abstract class Coin {
     protected String valueDescription;
     protected boolean ridgedEdge;
     protected int manufactureYear;
-    protected String metallurgy;
+    protected Metallurgy metallurgy;
     
     public Coin() {
 
@@ -53,7 +53,7 @@ public abstract class Coin {
     public boolean getRidgedEdge() {
 	return ridgedEdge;
     }
-    public String getMetallurgy() {
+    public Metallurgy getMetallurgy() {
 	return metallurgy;
     }
     public int getYear() {

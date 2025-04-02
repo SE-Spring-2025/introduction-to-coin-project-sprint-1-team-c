@@ -6,7 +6,7 @@ public class Penny extends Coin {
 	backImage = "Lincoln_Memorial";
 	valueDescription = "ONE CENT";
 	ridgedEdge = false;
-	metallurgy = "Copper";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
@@ -20,7 +20,7 @@ public class Penny extends Coin {
 	backImage = "Lincoln_Memorial";
 	valueDescription = "ONE CENT";
 	ridgedEdge = false;
-	metallurgy = "Copper";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";

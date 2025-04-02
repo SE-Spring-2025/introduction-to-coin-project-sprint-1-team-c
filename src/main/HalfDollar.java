@@ -6,7 +6,7 @@ public class HalfDollar extends Coin {
         backImage = "Presidential_Seal";
         valueDescription = "HALF DOLLAR";
         ridgedEdge = true;
-        metallurgy = "Cupro-Nickel";
+        metallurgy = new CuproNickel();
         frontMotto = "IN GOD WE TRUST";
         backMotto = "E PLURIBUS UNUM";
         frontLabel = "LIBERTY";
@@ -19,7 +19,7 @@ public class HalfDollar extends Coin {
         backImage = "Presidential_Seal";
         valueDescription = "HALF DOLLAR";
         ridgedEdge = true;
-        metallurgy = "Cupro-Nickel";
+        metallurgy = new CuproNickel();
         frontMotto = "IN GOD WE TRUST";
         backMotto = "E PLURIBUS UNUM";
         frontLabel = "LIBERTY";

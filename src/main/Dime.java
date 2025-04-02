@@ -7,7 +7,7 @@ public class Dime extends Coin {
 	backImage = "Torch_Branches";
 	valueDescription = "ONE DIME";
 	ridgedEdge = true;
-	metallurgy = "Cupro-Nickel";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
@@ -21,7 +21,7 @@ public class Dime extends Coin {
 	backImage = "Torch_Branches";
 	valueDescription = "ONE DIME";
 	ridgedEdge = true;	
-	metallurgy = "Cupro-Nickel";
+	metallurgy = new CuproNickel();
 	frontMotto = "IN GOD WE TRUST";
 	backMotto = "E PLURIBUS UNUM";
 	frontLabel = "LIBERTY";
