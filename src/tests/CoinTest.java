@@ -51,7 +51,7 @@ public class CoinTest {
 	return Math.abs(a-b) < 0.00001;
     }
     private boolean testPenny() {
-	Penny p = new Penny();
+	Penny p = new Penny(0.01);
 	
 	if (! "Penny".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -71,7 +71,7 @@ public class CoinTest {
 	
     //Helper Methods Provided
     private boolean testNickel() {
-	Nickel n = new Nickel();
+	Nickel n = new Nickel(0.05);
 	
 	if (! "Nickel".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -89,7 +89,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testDime() {
-	Dime d = new Dime();
+	Dime d = new Dime(0.1);
 	
 	if (! "Dime".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -107,7 +107,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testQuarter() {
-	Quarter q = new Quarter();
+	Quarter q = new Quarter(0.25);
 	
 	if (! "Quarter".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -125,7 +125,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testHalfDollar() {
-	HalfDollar hd = new HalfDollar();
+	HalfDollar hd = new HalfDollar(0.5);
 	
 	if (! "HalfDollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -143,7 +143,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testDollar() {
-	Dollar dd = new Dollar();
+	Dollar dd = new Dollar(1.0);
 	
 	if (! "Dollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
