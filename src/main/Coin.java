@@ -74,7 +74,7 @@ public abstract class Coin {
 	        + "','" + backLabel
 	        + "','" + valueDescription
 	        + "'," + (ridgedEdge ? "ridges" : "smooth")
-	        + ",'" + metallurgy
+	        + ",'" + getMetallurgy()
 	        + "']";
     }
 }
