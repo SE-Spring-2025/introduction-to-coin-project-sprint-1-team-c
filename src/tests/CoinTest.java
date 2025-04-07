@@ -51,7 +51,7 @@ public class CoinTest {
 	return Math.abs(a-b) < 0.00001;
     }
     private boolean testPenny() {
-	Penny p = new Penny(0.01);
+	Penny c = new Penny();
 	
 	if (! "Penny".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -63,7 +63,6 @@ public class CoinTest {
 	if (! "ONE CENT".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != false) return false;
 	if (! "Copper".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	    
 	// make it here then didn't fail!
 	return true;
@@ -71,7 +70,7 @@ public class CoinTest {
 	
     //Helper Methods Provided
     private boolean testNickel() {
-	Nickel n = new Nickel(0.05);
+	Nickel c = new Nickel();
 	
 	if (! "Nickel".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -83,13 +82,12 @@ public class CoinTest {
 	if (! "FIVE CENTS".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != false) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	
 	// make it here then didn't fail!
 	return true;
     }
     private boolean testDime() {
-	Dime d = new Dime(0.1);
+	Dime c = new Dime();
 	
 	if (! "Dime".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -101,13 +99,12 @@ public class CoinTest {
 	if (! "ONE DIME".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != true) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	
 	// make it here then didn't fail!
 	return true;
     }
     private boolean testQuarter() {
-	Quarter q = new Quarter(0.25);
+	Quarter c = new Quarter();
 	
 	if (! "Quarter".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -119,13 +116,12 @@ public class CoinTest {
 	if (! "QUARTER DOLLAR".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != true) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	
 	// make it here then didn't fail!
 	return true;
     }
     private boolean testHalfDollar() {
-	HalfDollar hd = new HalfDollar(0.5);
+	HalfDollar c = new HalfDollar();
 	
 	if (! "HalfDollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -137,13 +133,12 @@ public class CoinTest {
 	if (! "HALF DOLLAR".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != true) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	
 	// make it here then didn't fail!
 	return true;
     }
     private boolean testDollar() {
-	Dollar dd = new Dollar(1.0);
+	Dollar c = new Dollar();
 	
 	if (! "Dollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -155,11 +150,9 @@ public class CoinTest {
 	if (! "ONE DOLLAR".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != true) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
-	if (currYear != c.getYear()) return false;
 	
 	// make it here then didn't fail!
 	return true;
     }
-}
 }
     
