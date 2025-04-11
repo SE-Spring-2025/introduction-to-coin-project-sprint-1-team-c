@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class NewCelsiusConverter extends JFrame implements Runnable {
+public class CoinUI extends JFrame implements Runnable {
 
     private JTextField celsiusTextField;
     private JLabel fahrenheitLabel;
