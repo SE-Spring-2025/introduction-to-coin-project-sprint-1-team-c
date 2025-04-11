@@ -77,4 +77,9 @@ public abstract class Coin {
 	        + ",'" + getMetallurgy()
 	        + "']";
     }
+
+    protected static class CoinCounter extends Coin
+    {
+        
+    }
 }
