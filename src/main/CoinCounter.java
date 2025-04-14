@@ -3,11 +3,11 @@ import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 
-public class CoinCounter extends JFrame implements Observer {
+public class CoinDashboard extends JFrame implements Observer {
     private JLabel totalLabel;
     private JLabel quarterLabel;
 
-    public CoinDashboard(CoinCounts counts) {
+    public CoinDashboard(Coin.CoinCounts counts) {
         setTitle("Coin Dashboard");
         setLayout(new FlowLayout());
 
@@ -25,8 +25,8 @@ public class CoinCounter extends JFrame implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if (o instanceof CoinCounts) {
-            CoinCounts cc = (CoinCounts) o;
+        if (o instanceof Coin.CoinCounts) {
+            Coin.CoinCounts cc = (Coin.CoinCounts) o;
             totalLabel.setText("Total Coins: " + cc.getTotal());
             quarterLabel.setText("Quarters: " + cc.getQuarters());
         }
