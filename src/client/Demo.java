@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.*;
+
 public class Demo {
         public static void main(String[] args) {
         
@@ -28,5 +31,21 @@ public class Demo {
 	System.out.println("A quarter is made of " + quarterCoin.getMetallurgy());
 	System.out.println("A halfDollar is made of " + halfDollarCoin.getMetallurgy());
 	System.out.println("A dollar is made of " + dollarCoin.getMetallurgy());
+
+	SwingUtilities.invokeLater(() -> {
+        Coin.CoinCounts counts = Coin.getCounter();
+        new CoinDashboard(counts);
+
+        JFrame frame = new JFrame("Coin Creator");
+ 	frame.setLayout(new FlowLayout());
+
+        JButton quarterButton = new JButton("Add Quarter");
+        frame.add(quarterButton);
+
+        quarterButton.addActionListener(e -> new Quarter());
+
+        frame.setSize(200, 100);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
  }
 }
