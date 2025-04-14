@@ -1,60 +1,34 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.util.Observable;
+import java.util.Observer;
 
-public class CoinUI extends JFrame implements Runnable {
+public class CoinCounter extends JFrame implements Observer {
+    private JLabel totalLabel;
+    private JLabel quarterLabel;
 
-    private JTextField celsiusTextField;
-    private JLabel fahrenheitLabel;
-    private JButton convertButton;
-    
-    public NewCelsiusConverter() {
-    }
-    public void setCelsius(int t) {
-	celsiusTextField.setText(String.valueOf(t));	
-    }
-    public void doClick() {
-	convertButton.doClick();
-    }
-    public void run() {
-        setTitle("Celsius Converter");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public CoinDashboard(CoinCounts counts) {
+        setTitle("Coin Dashboard");
         setLayout(new FlowLayout());
 
-	celsiusTextField = new JTextField("", 10);
-        add(celsiusTextField);
+        totalLabel = new JLabel("Total Coins: 0");
+        quarterLabel = new JLabel("Quarters: 0");
 
-        convertButton = new JButton("Convert");
-	// don't "add" this button so it remains "hidden" from view
+        add(totalLabel);
+        add(quarterLabel);
 
-        fahrenheitLabel = new JLabel("Fahrenheit: ");
-        add(fahrenheitLabel);
-
-        JButton resetButton = new JButton("Reset");
-	add(resetButton);
-	
-        convertButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    double celsius = Double.parseDouble(celsiusTextField.getText());
-                    double fahrenheit = celsius * 9 / 5 + 32;
-                    fahrenheitLabel.setText("Fahrenheit: " + fahrenheit);
-                } catch (NumberFormatException ex) {
-                    fahrenheitLabel.setText("Invalid input");
-                }
-            }
-        });
-        resetButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-		celsiusTextField.setText("");
-		fahrenheitLabel.setText("Fahrenheit: ");
-            }
-        });
-
-        pack();
+        setSize(250, 120);
         setVisible(true);
+
+        counts.addObserver(this);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        if (o instanceof CoinCounts) {
+            CoinCounts cc = (CoinCounts) o;
+            totalLabel.setText("Total Coins: " + cc.getTotal());
+            quarterLabel.setText("Quarters: " + cc.getQuarters());
+        }
     }
 }
-
