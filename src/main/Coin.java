@@ -1,4 +1,6 @@
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Coin {
     protected String familiarName;
@@ -80,6 +82,33 @@ public abstract class Coin {
 
     protected static class CoinCounter extends Coin
     {
+        private ArrayList<Observer> observers;
+        private int totalCoins = 0;
+        private int quarters = 0;
         
+        public CoinCounter() {
+            observers = new ArrayList<>();
+        }
+
+        public void registerObserver(Observer o) {
+            observers.add(o);
+        }
+    
+        public void removeObserver(Observer o) {
+            observers.remove(o);
+        }
+    
+        public void notifyObservers() {
+            for (Observer observer : observers) {
+                observer.update();
+            }
+        }
+
+        public void addQuarter() {
+            quarters++;
+            totalCoins++;
+            notifyObservers();
+        }
+    
     }
 }
