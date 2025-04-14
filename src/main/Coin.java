@@ -18,11 +18,10 @@ public abstract class Coin {
 
     }
     public Coin(double value) {
-        this.value = value;
+
     }
     public Coin(double value, int year) {
-        this.value = value;
-        this.manufactureYear = year;
+
     }
     public String getFamiliarName() {
 	return familiarName;
@@ -82,17 +81,5 @@ public abstract class Coin {
     protected static class CoinCounter extends Coin
     {
         
-
-
-        CoinCounter(String name)
-        {
-
-        }
-
-        incrementQuarter()
-        {
-
-        }
-
     }
 }
