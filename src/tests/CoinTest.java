@@ -44,7 +44,110 @@ public class CoinTest {
 	
 	// make it here then didn't fail!
 	assertTrue(true);
-
+ private boolean testPenny() {
+	Penny c = new Penny();
+	
+	if (! "Penny".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "A_Lincoln".equals(c.getFrontImage())) return false;
+	if (! "Lincoln_Memorial".equals(c.getBackImage())) return false;
+	if (! "ONE CENT".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != false) return false;
+	if (! "Copper".equals(c.getMetallurgy())) return false;
+	    
+	// make it here then didn't fail!
+	return true;
     }
+	
+    //Helper Methods Provided
+    private boolean testNickel() {
+	Nickel c = new Nickel();
+	
+	if (! "Nickel".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "T_Jefferson".equals(c.getFrontImage())) return false;
+	if (! "Jefferson_Memorial".equals(c.getBackImage())) return false;
+	if (! "FIVE CENTS".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != false) return false;
+	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
+	
+	// make it here then didn't fail!
+	return true;
+    }
+    private boolean testDime() {
+	Dime c = new Dime();
+	
+	if (! "Dime".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "F_Roosevelt".equals(c.getFrontImage())) return false;
+	if (! "Torch_Branches".equals(c.getBackImage())) return false;
+	if (! "ONE DIME".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != true) return false;
+	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
+	
+	// make it here then didn't fail!
+	return true;
+    }
+    private boolean testQuarter() {
+	Quarter c = new Quarter();
+	
+	if (! "Quarter".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "G_Washington".equals(c.getFrontImage())) return false;
+	if (! "Eagle".equals(c.getBackImage())) return false;
+	if (! "QUARTER DOLLAR".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != true) return false;
+	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
+	
+	// make it here then didn't fail!
+	return true;
+    }
+    private boolean testHalfDollar() {
+	HalfDollar c = new HalfDollar();
+	
+	if (! "HalfDollar".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "J_Kennedy".equals(c.getFrontImage())) return false;
+	if (! "Presidential_Seal".equals(c.getBackImage())) return false;
+	if (! "HALF DOLLAR".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != true) return false;
+	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
+	
+	// make it here then didn't fail!
+	return true;
+    }
+    private boolean testDollar() {
+	Dollar c = new Dollar();
+	
+	if (! "Dollar".equals(c.getFamiliarName())) return false;
+	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
+	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
+	if (! "LIBERTY".equals(c.getFrontLabel())) return false;
+	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
+	if (! "S_Anthony".equals(c.getFrontImage())) return false;
+	if (! "Moon_Eagle".equals(c.getBackImage())) return false;
+	if (! "ONE DOLLAR".equals(c.getValueDescription())) return false;
+	if (c.getRidgedEdge() != true) return false;
+	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
+	
+	// make it here then didn't fail!
+	return true;
+    }
+
 }
     
