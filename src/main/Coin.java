@@ -63,7 +63,7 @@ public abstract class Coin {
         DecimalFormat df = new DecimalFormat("0.00");
         String formattedValue = df.format(value);
 	
-	    return "[" + familiarName
+        return "[" + familiarName
 	        + "," + formattedValue
 	        + "," + manufactureYear
 	        + ",'" + frontMotto

@@ -44,6 +44,7 @@ public class CoinTest {
 	
 	// make it here then didn't fail!
 	assertTrue(true);
+	}
  private boolean testPenny() {
 	Penny c = new Penny();
 	
