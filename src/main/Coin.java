@@ -14,14 +14,14 @@ public class Coin {
     
     public Coin() {
 
-	}
+    }
     public Coin(double value) {
 
-	}
+    }
     public Coin(double value, int year) {
 
     }
     public String toString() {
-		return "";
+	return "";
     }
 }
