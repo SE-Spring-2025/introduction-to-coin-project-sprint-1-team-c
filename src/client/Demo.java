@@ -7,37 +7,37 @@ public class Demo {
 	System.out.println("Demo of the Coins classes");
 
 
-	Penny pennyCoin = new Penny();
-	System.out.println("Here is a penny: " + pennyCoin.toString());
+	// Penny pennyCoin = new Penny();
+	// System.out.println("Here is a penny: " + pennyCoin.toString());
 
-	Nickel nickelCoin = new Nickel();
-	System.out.println("Here is a nickel: " + nickelCoin.toString());
+	// Nickel nickelCoin = new Nickel();
+	// System.out.println("Here is a nickel: " + nickelCoin.toString());
 	
-	Dime dimeCoin = new Dime();
-	System.out.println("Here is a dime: " + dimeCoin.toString());
+	// Dime dimeCoin = new Dime();
+	// System.out.println("Here is a dime: " + dimeCoin.toString());
+	
+	// Quarter quarterCoin = new Quarter();
+	// System.out.println("Here is a Quarter: " + quarterCoin.toString());
+	
+	// HalfDollar halfDollarCoin = new HalfDollar();
+	// System.out.println("Here is a half dollar: " + halfDollarCoin.toString());
 
-	Quarter quarterCoin = new Quarter();
-	System.out.println("Here is a Quarter: " + quarterCoin.toString());
+	// Dollar dollarCoin = new Dollar();
+	// System.out.println("Here is a dollar: " + dollarCoin.toString());
 
-	HalfDollar halfDollarCoin = new HalfDollar();
-	System.out.println("Here is a half dollar: " + halfDollarCoin.toString());
-
-	Dollar dollarCoin = new Dollar();
-	System.out.println("Here is a dollar: " + dollarCoin.toString());
-
-	System.out.println("A penny is made of " + pennyCoin.getMetallurgy());
-	System.out.println("A nickle is made of " + nickelCoin.getMetallurgy());
-	System.out.println("A dime is made of " + dimeCoin.getMetallurgy());
-	System.out.println("A quarter is made of " + quarterCoin.getMetallurgy());
-	System.out.println("A halfDollar is made of " + halfDollarCoin.getMetallurgy());
-	System.out.println("A dollar is made of " + dollarCoin.getMetallurgy());
+	// System.out.println("A penny is made of " + pennyCoin.getMetallurgy());
+	// System.out.println("A nickle is made of " + nickelCoin.getMetallurgy());
+	// System.out.println("A dime is made of " + dimeCoin.getMetallurgy());
+	// System.out.println("A quarter is made of " + quarterCoin.getMetallurgy());
+	// System.out.println("A halfDollar is made of " + halfDollarCoin.getMetallurgy());
+	// System.out.println("A dollar is made of " + dollarCoin.getMetallurgy());
 
 	SwingUtilities.invokeLater(() -> {
-        Coin.CoinCounts counts = Coin.getCounter();
+        Coin.CoinCounter counts = Coin.getCounter();
         new CoinDashboard(counts);
 
         JFrame frame = new JFrame("Coin Creator");
- 	frame.setLayout(new FlowLayout());
+ 		frame.setLayout(new FlowLayout());
 
         JButton quarterButton = new JButton("Add Quarter");
         frame.add(quarterButton);
@@ -47,5 +47,7 @@ public class Demo {
         frame.setSize(200, 100);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
- }
+ 	});
+
+}
 }

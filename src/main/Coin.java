@@ -1,8 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Coin {
+    protected static CoinCounter counter = new CoinCounter();
     protected String familiarName;
     protected double value;
     protected String frontMotto;
@@ -61,6 +61,9 @@ public abstract class Coin {
     public int getYear() {
 	return manufactureYear;
     }
+    public static CoinCounter getCounter() {
+        return counter;
+    }
     public String toString() {
         DecimalFormat df = new DecimalFormat("0.00");
         String formattedValue = df.format(value);
@@ -80,8 +83,7 @@ public abstract class Coin {
 	        + "']";
     }
 
-    protected static class CoinCounter extends Coin
-    {
+    protected static class CoinCounter implements Subject {
         private ArrayList<Observer> observers;
         private int totalCoins = 0;
         private int quarters = 0;
@@ -109,6 +111,13 @@ public abstract class Coin {
             totalCoins++;
             notifyObservers();
         }
+        public int getQuarters() {
+            return quarters;
+        }
+        public int getTotalCoins() {
+            return totalCoins;
+        }
+        
     
     }
 }

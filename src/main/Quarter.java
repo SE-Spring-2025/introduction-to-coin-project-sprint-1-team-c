@@ -12,6 +12,7 @@ public class Quarter extends Coin {
         frontLabel = "LIBERTY";
         backLabel = "UNITED STATES OF AMERICA";
         value = quarterValue;
+        Coin.counter.addQuarter();
     }
     public Quarter(int year) {
         familiarName = "Quarter";
@@ -26,5 +27,6 @@ public class Quarter extends Coin {
         backLabel = "UNITED STATES OF AMERICA";
         manufactureYear = year;
         value = quarterValue;
+        Coin.counter.addQuarter();
     }
 }
