@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 
 public abstract class Coin {
     protected String familiarName;
@@ -60,11 +59,7 @@ public abstract class Coin {
 	return manufactureYear;
     }
     public String toString() {
-        DecimalFormat df = new DecimalFormat("0.00");
-        String formattedValue = df.format(value);
-	
         return "[" + familiarName
-	        + "," + formattedValue
 	        + "," + manufactureYear
 	        + ",'" + frontMotto
 	        + "','" + backMotto
