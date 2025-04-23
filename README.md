@@ -4,7 +4,7 @@
 * Basic Coin class with tests and demo
 
 ## Contributions
-* Adam - Collaborated with Ayden to write the CoinCounter class and interactions between classes.
-* Ayden - Collaborated with Adam to write the CoinCounter class and interactions between classes.
-* Haben - Collaborated with Carson to write the demo class and test class. 
-* Carson -  Collaborated with Haben to write the demo class and test class. 
+* Adam - Collaborated with Carson to update the demo class and new Coin method.
+* Ayden - Collaborated with Haben to update the Test and dime,dollar,quater,etc classes.
+* Haben - Collaborated with Ayden to update the Test and dime,dollar,quater,etc classes.
+* Carson -  Collaborated with Adam to update the demo class and new Coin method.
