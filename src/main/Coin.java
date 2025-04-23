@@ -15,15 +15,20 @@ public abstract class Coin {
     protected boolean ridgedEdge;
     protected int manufactureYear;
     protected Metallurgy metallurgy;
+    protected boolean flipped;
+    protected boolean buffed;
     
     public Coin() {
-
+    this.metallurgy = null;
     }
     public Coin(double value) {
-
+    this.metallurgy = null;
+    this.value = value;
     }
     public Coin(double value, int year) {
-
+    this.metallurgy = null;
+    this.value = value;
+    this.manufactureYear = year;
     }
     public String getFamiliarName() {
 	return familiarName;
@@ -81,6 +86,35 @@ public abstract class Coin {
 	        + "'," + (ridgedEdge ? "ridges" : "smooth")
 	        + ",'" + getMetallurgy()
 	        + "']";
+    }
+
+    public final Coin manufacture(Coin c0) {
+        Coin c1 = smelt(c0);
+        Coin c2 = edge(c1);
+        Coin c3 = imprintFrontImage(c2);
+        Coin c4 = imprintFrontMotto(c3);
+        Coin c5 = flip(c4);
+        Coin c6 = imprintBack(c5);
+        Coin c7 = buff(c6);
+    
+        Coin.getCounter().totalCoins++;
+        return c7;
+    }
+
+    protected abstract Coin smelt(Coin c);
+    protected abstract Coin edge(Coin c);
+    protected abstract Coin imprintFrontImage(Coin c);
+    protected abstract Coin imprintFrontMotto(Coin c);
+    protected abstract Coin imprintBack(Coin c);
+
+    protected Coin flip(Coin c) {
+    this.flipped = true;
+    return c;
+    }
+
+    protected Coin buff(Coin c) {
+    this.buffed = true;
+    return c;
     }
 
     protected static class CoinCounter implements Subject {
