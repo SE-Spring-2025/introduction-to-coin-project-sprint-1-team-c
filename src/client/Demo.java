@@ -55,5 +55,30 @@ public class Demo {
         System.out.println("Original dime: " + originalDime);
         System.out.println("Manufactured dime: " + manufacturedDime);
 
+	Coin originalDollar = new Dollar();
+        Coin manufacturedDollar = original.manufacture(originalDollar);
+        System.out.println("Original dollar: " + originalDollar);
+        System.out.println("Manufactured dollar: " + manufacturedDollar);
+
+        Coin originalHalfDollar = new HalfDollar();
+        Coin manufacturedHalfDollar = original.manufacture(originalHalfDollar);
+        System.out.println("Original half dollar: " + originalHalfDollar);
+        System.out.println("Manufactured half dollar: " + manufacturedHalfDollar);
+
+        Coin originalNickel = new Nickel();
+        Coin manufacturedNickel = original.manufacture(originalNickel);
+        System.out.println("Original nickel: " + originalNickel);
+        System.out.println("Manufactured nickel: " + manufacturedNickel);
+
+        Coin originalPenny = new Penny();
+        Coin manufacturedPenny = original.manufacture(originalPenny);
+        System.out.println("Original penny: " + originalPenny);
+        System.out.println("Manufactured penny: " + manufacturedPenny);
+
+        Coin originalQuarter = new Quarter();
+        Coin manufacturedQuarter = original.manufacture(originalQuarter);
+        System.out.println("Original quarter: " + originalQuarter);
+        System.out.println("Manufactured quarter: " + manufacturedQuarter);
+
 }
 }
