@@ -19,16 +19,16 @@ public abstract class Coin {
     protected boolean buffed;
     
     public Coin() {
-    this.metallurgy = null;
+        this.metallurgy = null;
     }
     public Coin(double value) {
-    this.metallurgy = null;
-    this.value = value;
+        this.metallurgy = null;
+        this.value = value;
     }
     public Coin(double value, int year) {
-    this.metallurgy = null;
-    this.value = value;
-    this.manufactureYear = year;
+        this.metallurgy = null;
+        this.value = value;
+        this.manufactureYear = year;
     }
     public String getFamiliarName() {
 	return familiarName;
@@ -96,8 +96,7 @@ public abstract class Coin {
         Coin c5 = flip(c4);
         Coin c6 = imprintBack(c5);
         Coin c7 = buff(c6);
-    
-        Coin.getCounter().totalCoins++;
+
         return c7;
     }
 
@@ -120,8 +119,13 @@ public abstract class Coin {
     protected static class CoinCounter implements Subject {
         private ArrayList<Observer> observers;
         private int totalCoins = 0;
+        private int pennies = 0;
+        private int nickels = 0;
+        private int dimes = 0;
         private int quarters = 0;
-        
+        private int halfDollars = 0;
+        private int dollars = 0;
+
         public CoinCounter() {
             observers = new ArrayList<>();
         }
@@ -140,17 +144,64 @@ public abstract class Coin {
             }
         }
 
-        public void addQuarter() {
-            quarters++;
-            totalCoins++;
-            notifyObservers();
+       public void addPenny() {
+        pennies++;
+        totalCoins++;
+        notifyObservers();
         }
+
+        public void addNickel() {
+        nickels++;
+        totalCoins++;
+        notifyObservers();
+        }
+
+        public void addDime() {
+        dimes++;
+        totalCoins++;
+        notifyObservers();
+        }
+
+        public void addQuarter() {
+        quarters++;
+        totalCoins++;
+        notifyObservers();
+        }
+
+        public void addHalfDollar() {
+        halfDollars++;
+        totalCoins++;
+        notifyObservers();
+        }
+
+        public void addDollar() {
+        dollars++;
+        totalCoins++;
+        notifyObservers();
+        }
+        
         public int getQuarters() {
-            return quarters;
+        return quarters;
         }
         public int getTotalCoins() {
-            return totalCoins;
+        return totalCoins;
         }
+        public int getPennies() {
+        return pennies;
+        }
+        public int getNickels() {
+        return nickels;
+        }
+        public int getDimes() {
+        return dimes;
+        }
+        public int getHalfDollars() {
+        return halfDollars;
+        }
+        public int getDollars() {
+        return dollars;
+        }
+        
         
     
     }
