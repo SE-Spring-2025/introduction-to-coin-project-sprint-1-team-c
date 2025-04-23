@@ -2,31 +2,45 @@ public class Nickel extends Coin {
     public final double nickelValue = .05;
 
     public Nickel() {
-	familiarName = "Nickel";
-	frontImage = "T_Jefferson";
-	backImage = "Jefferson_Memorial";
-	valueDescription = "FIVE CENTS";
-	ridgedEdge = false;
-	metallurgy = new CuproNickel();
-	frontMotto = "IN GOD WE TRUST";
-	backMotto = "E PLURIBUS UNUM";
-	frontLabel = "LIBERTY";
-	backLabel = "UNITED STATES OF AMERICA";
-	value = nickelValue;
+	this.value = nickelValue;
+	this.metallurgy = new CuproNickel();
+	this.familiarName = "Nickel";
     }
 
     public Nickel(int year) {
-	familiarName = "Nickel";
-	frontImage = "T_Jefferson";
-	backImage = "Jefferson_Memorial";
-	valueDescription = "FIVE CENTS";
-	ridgedEdge = false;
-	metallurgy = new CuproNickel();
-	frontMotto = "IN GOD WE TRUST";
-	backMotto = "E PLURIBUS UNUM";
-	frontLabel = "LIBERTY";
-	backLabel = "UNITED STATES OF AMERICA";
-	manufactureYear = year;
-	value = nickelValue;
+	this.value = nickelValue;
+	this.familiarName = "Nickel";
+	this.metallurgy = new CuproNickel();
+	this.manufactureYear = year;
+    }
+
+	protected Coin smelt(Coin c) {
+        c.metallurgy.smelt(); 
+        return c;
+    }
+
+    protected Coin edge(Coin c) {
+        c.ridgedEdge = false;
+        return c;
+    }
+
+    protected Coin imprintFrontImage(Coin c) {
+        c.frontImage = "T_Jefferson";
+        return c;
+    }
+
+    protected Coin imprintFrontMotto(Coin c) {
+        c.frontMotto = "IN GOD WE TRUST";
+        c.frontLabel = "LIBERTY";
+        c.manufactureYear = 2025;
+        return c;
+    }
+
+    protected Coin imprintBack(Coin c) {
+        c.backImage = "Jefferson_Memorial";
+		c.backMotto = "E PLURIBUS UNUM";
+		c.backLabel = "UNITED STATES OF AMERICA";
+		c.valueDescription = "FIVE CENTS";
+        return c;
     }
 }
