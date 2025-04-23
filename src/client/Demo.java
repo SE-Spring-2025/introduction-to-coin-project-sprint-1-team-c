@@ -49,5 +49,11 @@ public class Demo {
         frame.setVisible(true);
  	});
 
+	//Demo for Sprint 5 and new Manufacture Coin Method
+	Coin originalDime = new Dime();
+        Coin manufacturedDime = original.manufacture(originalDime);
+        System.out.println("Original dime: " + originalDime);
+        System.out.println("Manufactured dime: " + manufacturedDime);
+
 }
 }
