@@ -107,13 +107,13 @@ public abstract class Coin {
     protected abstract Coin imprintBack(Coin c);
 
     protected Coin flip(Coin c) {
-    this.flipped = true;
-    return c;
+        this.flipped = true;
+        return c;
     }
 
     protected Coin buff(Coin c) {
-    this.buffed = true;
-    return c;
+        this.buffed = true;
+        return c;
     }
 
     protected static class CoinCounter implements Subject {
@@ -144,62 +144,62 @@ public abstract class Coin {
             }
         }
 
-       public void addPenny() {
-        pennies++;
-        totalCoins++;
-        notifyObservers();
+        public void addPenny() {
+            pennies++;
+            totalCoins++;
+            notifyObservers();
         }
 
         public void addNickel() {
-        nickels++;
-        totalCoins++;
-        notifyObservers();
+            nickels++;
+            totalCoins++;
+            notifyObservers();
         }
 
         public void addDime() {
-        dimes++;
-        totalCoins++;
-        notifyObservers();
+            dimes++;
+            totalCoins++;
+            notifyObservers();
         }
 
         public void addQuarter() {
-        quarters++;
-        totalCoins++;
-        notifyObservers();
+            quarters++;
+            totalCoins++;
+            notifyObservers();
         }
 
         public void addHalfDollar() {
-        halfDollars++;
-        totalCoins++;
-        notifyObservers();
+            halfDollars++;
+            totalCoins++;
+            notifyObservers();
         }
 
         public void addDollar() {
-        dollars++;
-        totalCoins++;
-        notifyObservers();
+            dollars++;
+            totalCoins++;
+            notifyObservers();
         }
         
         public int getQuarters() {
-        return quarters;
+            return quarters;
         }
         public int getTotalCoins() {
-        return totalCoins;
+            return totalCoins;
         }
         public int getPennies() {
-        return pennies;
+            return pennies;
         }
         public int getNickels() {
-        return nickels;
+            return nickels;
         }
         public int getDimes() {
-        return dimes;
+            return dimes;
         }
         public int getHalfDollars() {
-        return halfDollars;
+            return halfDollars;
         }
         public int getDollars() {
-        return dollars;
+            return dollars;
         }
         
         

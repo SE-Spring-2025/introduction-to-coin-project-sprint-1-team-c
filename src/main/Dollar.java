@@ -5,6 +5,7 @@ public class Dollar extends Coin {
 	this.value = dollarValue;
 	this.metallurgy = new CuproNickel();
 	this.familiarName = "Dollar";
+    
     }
 
     public Dollar(int year) {
@@ -14,7 +15,7 @@ public class Dollar extends Coin {
 	this.manufactureYear = year;
     }
 
-	protected Coin smelt(Coin c) {
+    protected Coin smelt(Coin c) {
         c.metallurgy.smelt(); 
         return c;
     }
@@ -32,15 +33,15 @@ public class Dollar extends Coin {
     protected Coin imprintFrontMotto(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
         c.frontLabel = "LIBERTY";
-        c.manufactureYear = 2025;
+        c.manufactureYear = manufactureYear;
         return c;
     }
 
     protected Coin imprintBack(Coin c) {
         c.backImage = "Moon_Eagle";
-		c.backMotto = "E PLURIBUS UNUM";
-		c.backLabel = "UNITED STATES OF AMERICA";
-		c.valueDescription = "DOLLAR";
+        c.backMotto = "E PLURIBUS UNUM";
+        c.backLabel = "UNITED STATES OF AMERICA";
+        c.valueDescription = "DOLLAR";
         return c;
     }
 }

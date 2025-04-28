@@ -2,19 +2,19 @@ public class Quarter extends Coin {
     public final double quarterValue = .25;
 
     public Quarter() {
-	this.value = quarterValue;
-	this.metallurgy = new CuproNickel();
-	this.familiarName = "Quarter";
+        this.value = quarterValue;
+        this.metallurgy = new CuproNickel();
+        this.familiarName = "Quarter";
     }
 
     public Quarter(int year) {
-	this.value = quarterValue;
-	this.familiarName = "Quarter";
-	this.metallurgy = new CuproNickel();
-	this.manufactureYear = year;
+        this.value = quarterValue;
+        this.familiarName = "Quarter";
+        this.metallurgy = new CuproNickel();
+        this.manufactureYear = year;
     }
 
-	protected Coin smelt(Coin c) {
+    protected Coin smelt(Coin c) {
         c.metallurgy.smelt(); 
         return c;
     }
@@ -32,15 +32,15 @@ public class Quarter extends Coin {
     protected Coin imprintFrontMotto(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
         c.frontLabel = "LIBERTY";
-        c.manufactureYear = 2025;
+        c.manufactureYear = manufactureYear;
         return c;
     }
 
     protected Coin imprintBack(Coin c) {
         c.backImage = "Eagle";
-		c.backMotto = "E PLURIBUS UNUM";
-		c.backLabel = "UNITED STATES OF AMERICA";
-		c.valueDescription = "QUARTER DOLLAR";
+        c.backMotto = "E PLURIBUS UNUM";
+        c.backLabel = "UNITED STATES OF AMERICA";
+        c.valueDescription = "QUARTER DOLLAR";
         return c;
     }
 }

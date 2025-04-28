@@ -14,7 +14,7 @@ public class Nickel extends Coin {
 	this.manufactureYear = year;
     }
 
-	protected Coin smelt(Coin c) {
+    protected Coin smelt(Coin c) {
         c.metallurgy.smelt(); 
         return c;
     }
@@ -32,15 +32,15 @@ public class Nickel extends Coin {
     protected Coin imprintFrontMotto(Coin c) {
         c.frontMotto = "IN GOD WE TRUST";
         c.frontLabel = "LIBERTY";
-        c.manufactureYear = 2025;
+        c.manufactureYear = manufactureYear;
         return c;
     }
 
     protected Coin imprintBack(Coin c) {
         c.backImage = "Jefferson_Memorial";
-		c.backMotto = "E PLURIBUS UNUM";
-		c.backLabel = "UNITED STATES OF AMERICA";
-		c.valueDescription = "FIVE CENTS";
+        c.backMotto = "E PLURIBUS UNUM";
+        c.backLabel = "UNITED STATES OF AMERICA";
+        c.valueDescription = "FIVE CENTS";
         return c;
     }
 }
