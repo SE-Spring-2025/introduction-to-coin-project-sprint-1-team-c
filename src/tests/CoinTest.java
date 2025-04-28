@@ -51,8 +51,9 @@ public class CoinTest {
 	return Math.abs(a-b) < 0.00001;
     }
     private boolean testPenny() {
-	Penny c = new Penny();
 	
+	Coin c = new Penny().manufacture(new Penny());
+
 	if (! "Penny".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
 	if (! "E PLURIBUS UNUM".equals(c.getBackMotto())) return false;
@@ -70,7 +71,7 @@ public class CoinTest {
 	
     //Helper Methods Provided
     private boolean testNickel() {
-	Nickel c = new Nickel();
+	Coin c = new Nickel().manufacture(new Nickel());
 	
 	if (! "Nickel".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -87,7 +88,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testDime() {
-	Dime c = new Dime();
+	Coin c = new Dime().manufacture(new Dime());
 	
 	if (! "Dime".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -104,7 +105,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testQuarter() {
-	Quarter c = new Quarter();
+	Coin c = new Quarter().manufacture(new Quarter());
 	
 	if (! "Quarter".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -121,7 +122,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testHalfDollar() {
-	HalfDollar c = new HalfDollar();
+	Coin c = new HalfDollar().manufacture(new HalfDollar());
 	
 	if (! "HalfDollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -138,7 +139,7 @@ public class CoinTest {
 	return true;
     }
     private boolean testDollar() {
-	Dollar c = new Dollar();
+	Coin c = new Dollar().manufacture(new Dollar());
 	
 	if (! "Dollar".equals(c.getFamiliarName())) return false;
 	if (! "IN GOD WE TRUST".equals(c.getFrontMotto())) return false;
@@ -147,7 +148,7 @@ public class CoinTest {
 	if (! "UNITED STATES OF AMERICA".equals(c.getBackLabel())) return false;
 	if (! "S_Anthony".equals(c.getFrontImage())) return false;
 	if (! "Moon_Eagle".equals(c.getBackImage())) return false;
-	if (! "ONE DOLLAR".equals(c.getValueDescription())) return false;
+	if (! "DOLLAR".equals(c.getValueDescription())) return false;
 	if (c.getRidgedEdge() != true) return false;
 	if (! "Cupro-Nickel".equals(c.getMetallurgy())) return false;
 	
